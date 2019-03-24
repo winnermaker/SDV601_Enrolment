@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrolment2", "Enrolment2\Enrolment2.csproj", "{2234D4E4-5364-4CB7-A51C-91033563F9C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enrolment3", "Enrolment3\Enrolment3.csproj", "{BA3A2463-78E0-476E-BC6A-0A38408A291B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2234D4E4-5364-4CB7-A51C-91033563F9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2234D4E4-5364-4CB7-A51C-91033563F9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2234D4E4-5364-4CB7-A51C-91033563F9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2234D4E4-5364-4CB7-A51C-91033563F9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3A2463-78E0-476E-BC6A-0A38408A291B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3A2463-78E0-476E-BC6A-0A38408A291B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3A2463-78E0-476E-BC6A-0A38408A291B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3A2463-78E0-476E-BC6A-0A38408A291B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE50E1BC-8588-4994-B8B8-B24A5DB8A7CC}
+	EndGlobalSection
+EndGlobal
