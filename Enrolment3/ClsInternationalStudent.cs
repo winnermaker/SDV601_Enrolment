@@ -10,6 +10,7 @@ namespace Enrolment3
     {
         private String _Country;
         private Single _IELTSScore;
+        private static FrmInternationalStudent _Form = new FrmInternationalStudent();
 
         public float IELTSScore { get => _IELTSScore; set => _IELTSScore = value; }
         public string Country { get => _Country; set => _Country = value; }
@@ -18,6 +19,10 @@ namespace Enrolment3
         {
             return base.ToString() + "\nCountry: " + Country + "\nIELTS Score: " + IELTSScore.ToString();
         }
-        
+
+        public override Boolean ViewEdit()
+        {
+            return Convert.ToBoolean(_Form.ShowDialog(this));
+        }
     }
 }
