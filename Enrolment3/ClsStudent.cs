@@ -22,12 +22,15 @@ namespace Enrolment3
 
         public static ClsStudent NewStudent(int prChoice)
         {
-            if (prChoice == 0)
-                return new ClsMOEStudent();
-            else if (prChoice == 1)
-                return new ClsTOPStudent();
-            else
-                return new ClsInternationalStudent();
+            switch (prChoice)
+            {
+                case 0:
+                    return new ClsMOEStudent();
+                case 1:
+                    return new ClsTOPStudent();
+                default:
+                    return new ClsInternationalStudent();
+            }           
         }
         public abstract Boolean ViewEdit();
 
