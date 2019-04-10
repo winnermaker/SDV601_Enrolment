@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Enrolment4
 {
+    [Serializable]
     class ClsInternationalStudent : ClsStudent
     {
         private String _Country;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Enrolment4
 {
+    [Serializable]
     class ClsTOPStudent : ClsStudent
     {
         private static FrmTOPStudent _Form = new FrmTOPStudent();

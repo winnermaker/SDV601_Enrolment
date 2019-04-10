@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Enrolment4
-{
+{    
     class ClsInstitute
-    {
-        private static List<ClsStudent> _StudentList = new List<ClsStudent>();
-
+    {        
+        private static List<ClsStudent> _StudentList = new List<ClsStudent>();       
         public static List<ClsStudent> StudentList { get => _StudentList; }
         public static decimal TotalBalance()
         {
@@ -18,7 +17,5 @@ namespace Enrolment4
                 lcTotal += lcStudent.Balance;
             return lcTotal;
         }
-
-
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Enrolment4
 {
+    [Serializable]
     class ClsMOEStudent : ClsStudent
     {
         private decimal _LoanAmount;

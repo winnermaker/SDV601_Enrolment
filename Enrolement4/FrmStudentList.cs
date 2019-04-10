@@ -12,11 +12,13 @@ namespace Enrolment4
 {
     public partial class FrmStudentList : Form
     {
+        private const string fileName = "student.xml";
         public FrmStudentList()
         {
             InitializeComponent();
             cboStudentType.DataSource = ClsStudent.StudentType;
             cboStudentType.SelectedIndex = 0;
+            Retrieve();
         }      
         private void UpdateDisplay()
         {
@@ -36,6 +38,7 @@ namespace Enrolment4
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            Save();
             Close();
         }
 
@@ -65,6 +68,42 @@ namespace Enrolment4
             if (lcStudent != null && lcStudent.ViewEdit())
             {
                 UpdateDisplay();
+            }
+        }
+
+        private void Save()
+        {
+            try
+            {
+                System.IO.FileStream lcFileStream = new System.IO.FileStream(fileName, System.IO.FileMode.Create);
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter lcFormatter =
+                    new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+                lcFormatter.Serialize(lcFileStream, ClsInstitute.StudentList);
+                lcFileStream.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "File Save Error");
+            }
+        }
+
+        private void Retrieve()
+        {
+            try
+            {
+                System.IO.FileStream lcFileStream = new System.IO.FileStream(fileName, System.IO.FileMode.Open);
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter lcFormatter =
+                    new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+                ClsInstitute.StudentList.AddRange((List < ClsStudent >) lcFormatter.Deserialize(lcFileStream));
+                UpdateDisplay();
+                lcFileStream.Close();
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "File Retrieve Error");
             }
         }
     }

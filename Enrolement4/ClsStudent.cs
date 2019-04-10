@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Enrolment4
-{    
+{
+    [Serializable]
     public abstract class ClsStudent
     {
         private String _ID;
